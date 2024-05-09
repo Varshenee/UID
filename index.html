@@ -1,234 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Mirrored from www.ticketgenie.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Apr 2024 12:43:39 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<html>
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <link rel="shortcut icon" href="favicon.png" type="image/png" />
-    <title> Ticketgenie | Sports, Events &amp; Concerts</title>
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link href="css/fa/css/all.css" rel="stylesheet" />
-    <link href="css/aos.css" rel="stylesheet" />
-    <link rel="icon" href="favicon.ico" />
-    <meta name="theme-color" content="#ef4222" />
-    <link rel="apple-touch-icon" href="TgLogo192.png" />
-    <link rel="manifest" href="manifest.json" />
-
-    
-    <link href="slick/slick.css" rel="stylesheet" />
-    <link href="slick/slick-theme.css" rel="stylesheet" />
-    <link href="owl/owl.carousel.css" rel="stylesheet" />
-    <link href="owl/owl.theme.default.css" rel="stylesheet" />
-
-    <link href="css/default4e8c.css?v=UaC0rb4As7MJKLJG46xADi2qltLu86RNKDYp5qs-jD0" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Selection</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="header" class="bg-tg fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-light justify-content-between tg-navbar tgcontainer">
-            <a class="navbar-brand" href="index.html">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText" style="margin-left: 10%;">
-                <span class="navbar-text hideOnMobile">
-                    <i></i>
-                </span>
-            </div>
-        </nav>
-    </header>
-    <div class="mainBodyTopMargin pb-3">
-        <main role="main">
-
-<div class="FeaturedEventContainer">
-    <div class="hdrCaption">Available Events</div>
-    <div class="featuredEventPanel">
-        <div class="row ml-0 mr-0">
-                    <div class="col-md-3" data-aos="fade-up" data-aos-duration="400">
-                        
-    <div class="card m-2 mb-5">
-        <div style="overflow:hidden; position:relative;">
-            <a href="https://shop.royalchallengers.com/ticket" style="text-decoration: none;">
-                <img class="card-img-top" src="Image/CurrentEvents/rcb2024.jpg" alt="Ticketgenie Events" />
-                <div class="card-img-overlay">
-                    <div class="btn card-img-overlay-button bg-tg">BUY TICKETS</div>
-                </div>
-            </a>
+    <div class="top-bar">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search movie" oninput="filterMovies()">
+            <button onclick="filterMovies()"><img src="search-icon.png" alt="Search"></button>
         </div>
-        <div class="card-body" style="padding:1px 0px;z-index:999;">
-            <table style="width:100%;">
-                <tr>
-                    <td style="text-align:center; width:25%; vertical-align:top; padding:1rem;">
-            <div style="line-height:15pt;">
-                <span style="font-size:26pt; color:#ef4222; font-weight:600;line-height:25pt;">15</span><br />
-                <span style="font-size:11pt; font-weight:600; color:#ef4222;"> Apr</span>
-            </div>
-                    </td>
-                    <td style="padding:8px;padding-left:0px;">
-                        <div class="evtCaption">
-                            RCB Home Games 2024
-                        </div>
-                        <div class="evtDate">07:30 PM <br /> Bengaluru</div>
-                        <div style="padding-top:10px;">
-            <span class="badge badge-pill" style="color:#ef4222; border:1px solid #ffa695; padding:6px 12px; margin-right:5px;">Cricket</span>
-            <span class="badge badge-pill" style="color:#ef4222; border:1px solid #ffa695; padding:6px 12px; margin-right:5px;"> Sports</span>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+        <div class="icons-right">
+            <img src="account-icon.png" alt="Account" class="account-logo">
+            <img src="info-icon.png" alt="Info" class="info-icon">
+            <img src="menu-icon.png" alt="Menu" class="menu-icon" onclick="toggleMenu()">
         </div>
     </div>
-
-                    </div>
-                    <div class="col-md-3" data-aos="fade-up" data-aos-duration="400">
-                        
-    <div class="card m-2 mb-5">
-        <div style="overflow:hidden; position:relative;">
-            <a href="https://in.ticketgenie.in/SelectStand/jamshedpur-fc-matches-2023-24/387" style="text-decoration: none;">
-                <img class="card-img-top" src="Image/CurrentEvents/jfc-Apr9.jpg" alt="Ticketgenie Events" />
-                <div class="card-img-overlay">
-                    <div class="btn card-img-overlay-button bg-tg">BUY TICKETS</div>
-                </div>
-            </a>
+    <h1>Select a Movie</h1>
+    <div id="movies" class="movie-container">
+        <div class="movie" onclick="selectMovie('Movie 1')">
+            <img src="movie1.jpeg" alt="Movie 1">
+            <p class="movie-title">Movie 1</p>
         </div>
-        <div class="card-body" style="padding:1px 0px;z-index:999;">
-            <table style="width:100%;">
-                <tr>
-                    <td style="text-align:center; width:25%; vertical-align:top; padding:1rem;">
-            <div style="line-height:15pt;">
-                <span style="font-size:26pt; color:#ef4222; font-weight:600;line-height:25pt;">09</span><br />
-                <span style="font-size:11pt; font-weight:600; color:#ef4222;"> Apr</span>
-            </div>
-                    </td>
-                    <td style="padding:8px;padding-left:0px;">
-                        <div class="evtCaption">
-                            Jamshedpur FC Vs FC Goa
-                        </div>
-                        <div class="evtDate">05:00 PM <br /> Jamshedpur</div>
-                        <div style="padding-top:10px;">
-            <span class="badge badge-pill" style="color:#ef4222; border:1px solid #ffa695; padding:6px 12px; margin-right:5px;">Football</span>
-            <span class="badge badge-pill" style="color:#ef4222; border:1px solid #ffa695; padding:6px 12px; margin-right:5px;"> Sports</span>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+        <div class="movie" onclick="selectMovie('Movie 2')">
+            <img src="movie2.jpg" alt="Movie 2">
+            <p class="movie-title">Movie 2</p>
+        </div>
+        <div class="movie" onclick="selectMovie('Movie 3')">
+            <img src="movie3.jpg" alt="Movie 3">
+            <p class="movie-title">Movie 3</p>
+        </div>
+        <div class="movie" onclick="selectMovie('Movie 4')">
+            <img src="movie4.jpg" alt="Movie 4">
+            <p class="movie-title">Movie 4</p>
         </div>
     </div>
-
-                    </div>
-                    <div class="col-md-3" data-aos="fade-up" data-aos-duration="400">
-                        
-    <div class="card m-2 mb-5">
-        <div style="overflow:hidden; position:relative;">
-            <a href="https://in.ticketgenie.in/Events/Boli-Re-Koyaliya" style="text-decoration: none;">
-                <img class="card-img-top" src="Image/CurrentEvents/boli-koyalia.jpg" alt="Ticketgenie Events" />
-                <div class="card-img-overlay">
-                    <div class="btn card-img-overlay-button bg-tg">BUY TICKETS</div>
-                </div>
-            </a>
-        </div>
-        <div class="card-body" style="padding:1px 0px;z-index:999;">
-            <table style="width:100%;">
-                <tr>
-                    <td style="text-align:center; width:25%; vertical-align:top; padding:1rem;">
-            <div style="line-height:15pt;">
-                <span style="font-size:26pt; color:#ef4222; font-weight:600;line-height:25pt;">05</span><br />
-                <span style="font-size:11pt; font-weight:600; color:#ef4222;"> May</span>
-            </div>
-                    </td>
-                    <td style="padding:8px;padding-left:0px;">
-                        <div class="evtCaption">
-                            Boli Re Koyaliya
-                        </div>
-                        <div class="evtDate">05:30 PM <br /> Bangalore</div>
-                        <div style="padding-top:10px;">
-            <span class="badge badge-pill" style="color:#ef4222; border:1px solid #ffa695; padding:6px 12px; margin-right:5px;">Music</span>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-                    </div>
-                    <div class="col-md-3" data-aos="fade-up" data-aos-duration="400">
-                        
-    <div class="card m-2 mb-5">
-        <div style="overflow:hidden; position:relative;">
-            <a href="https://in.ticketgenie.in/Events/Shreya-Ghoshal-All-Hearts-Live-In-Tour" style="text-decoration: none;">
-                <img class="card-img-top" src="Image/CurrentEvents/sml-shreya.jpg" alt="Ticketgenie Events" />
-                div class="card-img-overlay">
-                    <div class="btn card-img-overlay-button bg-tg">BUY TICKETS</div>
-                </div>
-            </a>
-        </div>
-        <div class="card-body" style="padding:1px 0px;z-index:999;">
-            <table style="width:100%;">
-                <tr>
-                    <td style="text-align:center; width:25%; vertical-align:top; padding:1rem;">
-            <div style="line-height:15pt;">
-                <span style="font-size:26pt; color:#ef4222; font-weight:600;line-height:25pt;">11</span><br />
-                <span style="font-size:11pt; font-weight:600; color:#ef4222;"> May</span>
-            </div>
-                    </td>
-                    <td style="padding:8px;padding-left:0px;">
-                        <div class="evtCaption">
-                            Shreya Ghoshal All Hearts Tour Bengaluru
-                        </div>
-                        <div class="evtDate">07:30 PM <br /> Bangalore</div>
-                        <div style="padding-top:10px;">
-            <span class="badge badge-pill" style="color:#ef4222; border:1px solid #ffa695; padding:6px 12px; margin-right:5px;">Music</span>
-            <span class="badge badge-pill" style="color:#ef4222; border:1px solid #ffa695; padding:6px 12px; margin-right:5px;"> Concert</span>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-                    </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/JavaScriptb403.js?v=_GXGqrXuQS3KBbf0tOM1h73jFLvJaX9ol0nKYNh95uc"></script>
-    <script src="js/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    
-    <script src="slick/slick.min.js"></script>
-    <script src="owl/owl.carousel.js"></script>
-    <script src="js/JavaScript.js"></script>
-    <script type="text/javascript">$(document).ready(function () {
-            strartSlider();
-            strartClient();
-            strartUpcoming();
-        });</script>
-
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 25) {
-                    $('#header').addClass('mat-elevation-z5');
-                } else {
-                    $('#header').removeClass('mat-elevation-z5');
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
