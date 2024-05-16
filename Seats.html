@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="ticket.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book it</title>
+    <title>My Movies</title>
 </head>
 
 <body>
@@ -15,18 +17,24 @@
             <button onclick="filterMovies()"><img src="search-icon.png" alt="Search"></button>
         </div>
         <div class="icons-right">
-            <img src="account-icon.png" alt="Account" class="account-logo">
-            <img src="info-icon.png" alt="Info" class="info-icon">
-            <img src="menu-icon.png" alt="Menu" class="menu-icon" onclick="toggleMenu()">
+            <a href="profile.html"><img src="account-icon.png" alt="Account" class="account-logo"></a>
+            <a href="site_info.html"><img src="info-icon.png" alt="Info" class="info-icon"></a>
+            <div class="dropdown">
+                <img src="menu-icon.png" alt="Menu Icon" class="dropbtn">
+                <div class="dropdown-content">
+                  <a href="#">Home</a>
+                  <a href="#">About</a>
+                  <a href="#">Contact</a>
+                </div>
+              </div>
         </div>
     </div>
     <br>
 
     <div id="info">
-    <p>Enter date:</p> 
-    <span style="position: relative;display: inline-block;border: 1px solid plum;height: 24px;width: 500px">
-        <input type="date" class="xDateContainer" onchange="setCorrect(this,'xTime');" style="position: absolute; opacity: 0.0;height: 100%;width: 50%;"><input type="text" id="xTime" name="xTime" value="dd / mm / yyyy" style="border: none;height: 90%;" tabindex="-1"><span style="display: inline-block;width: 20px;z-index: 2;float: right;padding-top: 3px;" tabindex="-1">&#9660;</span>
-    </span>
+    <label for="dateInput">Select a date:</label>
+    <br>
+    <input type="date" id="dateInput" name="dateInput">
 
     <!-- time -->
     <p>Select a Time:<p>
@@ -56,12 +64,13 @@
                 <option value="AM">AM</option>
                 <option value="PM">PM</option>
             </select>
-            <br><br>
+            <br>
         </form>
         <p id="selectedTime"></p>
 
         <form>
             <label for="">Number of Seats:</label>
+            <br>
             <input type="number" id="number" name="number" value="1" required> <!--Taking the number of seats needed to be booked as input-->
             <button type="submit" onclick="calculate()">Enter</button>
         </form>
@@ -72,16 +81,16 @@
     <div class="availability">
         <div class="square_cont">
             <div id="square1"></div>
-            <span>Available</span>
+            <span class="span">Available</span>
         </div>
     
         <div class="square_cont">
             <div id="square2"></div>
-            <span>Unavailable</span>
+            <span class="span">Unavailable</span>
         </div>
         
         <div class="square_cont">
-            <div id="square3"></div><span>Booked</span>
+            <div id="square3"></div><span class="span">Booked</span>
         </div>
     </div>
 
@@ -359,20 +368,16 @@
     </div>
 
     <p id="result"></p>
+    <br>
 
-
-
+    <div class="button-container">
+        <button class="proceed-button" onclick = "window.location.href='payment.html';">Proceed with Payment</button>
+    </div>
+    <br>
+    <br>
     
     <script>
 
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            if (menu.style.display === 'none') {
-                menu.style.display = 'block';
-            } else {
-                menu.style.display = 'none';
-            }
-        }
         
         function filterMovies() {
             let input = document.getElementById('search-input').value.toUpperCase();
@@ -391,33 +396,6 @@
             }
         }
 
-        var matchEnterdDate=0;
-        //function to set back date opacity for non supported browsers
-            window.onload =function(){
-                var input = document.createElement('input');
-                input.setAttribute('type','date');
-                input.setAttribute('value', 'some text'); 
-                if(input.value === "some text"){
-                    allDates = document.getElementsByClassName("xDateContainer");
-                    matchEnterdDate=1;
-                    for (var i = 0; i < allDates.length; i++) {
-                        allDates[i].style.opacity = "1";
-                    } 
-                }
-            }
-        //function to convert enterd date to any format
-        function setCorrect(xObj,xTraget){
-            var date = new Date(xObj.value);
-            var month = date.getMonth();
-            var day = date.getDate();
-            var year = date.getFullYear();
-            if(month!='NaN'){
-                document.getElementById(xTraget).value=day+" / "+month+" / "+year;
-            }else{
-                if(matchEnterdDate==1){document.getElementById(xTraget).value=xObj.value;}
-            }
-        }
-
         // time
         function getTime() {
                     var hours = document.getElementById('hours').value;
@@ -429,7 +407,7 @@
                 }
 
         function bgcolour(button){
-            button.style.backgroundColor=  "#48f679" ; // Onclick changes the color of the button's bg
+            button.style.backgroundColor=  "#39c962" ; // Onclick changes the color of the button's bg
 
         }
 
