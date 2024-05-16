@@ -10,7 +10,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #e26613;
+    background-color: rgb(226, 102, 19);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
@@ -42,9 +42,21 @@ body {
     height: 20px;
 }
 
+.icons-left{
+    display: flex;
+    align-items: center;
+}
+
 .icons-right {
     display: flex;
     align-items: center;
+}
+
+#logo{
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 .account-logo, .info-icon, .menubtn {
