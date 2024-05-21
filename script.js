@@ -23,3 +23,11 @@ function filterMovies() {
         }
     }
 }
+
+function selectMovie(movieId) {
+    window.location.href = 'movie-details.html?movieId=' + movieId;
+}
+
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
