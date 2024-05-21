@@ -1,5 +1,4 @@
 <html>
-<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Selection</title>
@@ -17,24 +16,79 @@
             <img src="menu-icon.png" alt="Menu" class="menu-icon" onclick="toggleMenu()">
         </div>
     </div>
-    <h1>Select a Movie</h1>
+    <div class="heading">
+        <h1>Select a Movie</h1>
+    </div>
     <div id="movies" class="movie-container">
         <div class="movie" onclick="selectMovie('Movie 1')">
-            <img src="movie1.jpeg" alt="Movie 1">
-            <p class="movie-title">Movie 1</p>
+            <img src="movie1.jpg" alt="Movie 1">
+            <p class="movie-title">THE CONJURING</p>
         </div>
         <div class="movie" onclick="selectMovie('Movie 2')">
             <img src="movie2.jpg" alt="Movie 2">
-            <p class="movie-title">Movie 2</p>
+            <p class="movie-title">JUSTICE LEAGUE</p>
         </div>
         <div class="movie" onclick="selectMovie('Movie 3')">
             <img src="movie3.jpg" alt="Movie 3">
-            <p class="movie-title">Movie 3</p>
+            <p class="movie-title">GRAVITY</p>
         </div>
         <div class="movie" onclick="selectMovie('Movie 4')">
             <img src="movie4.jpg" alt="Movie 4">
-            <p class="movie-title">Movie 4</p>
+            <p class="movie-title">LO AND BEHOLD</p>
         </div>
+        <div class="movie" onclick="selectMovie('Movie 5')">
+            <img src="movie5.jpg" alt="Movie 5">
+            <p class="movie-title">ARCHER</p>
+        </div>
+        <div class="movie" onclick="selectMovie('Movie 6')">
+            <img src="movie6.jpg" alt="Movie 6">
+            <p class="movie-title">STAR WARS <br> - THE RISE OF SKYWALKER</p>
+        </div>
+        <div class="movie" onclick="selectMovie('Movie 7')">
+            <img src="movie7.jpg" alt="Movie 7">
+            <p class="movie-title">STAR WARS <br> - ROGUE ONE</p>
+        </div>
+        <div class="movie" onclick="selectMovie('Movie 8')">
+            <img src="movie8.jpg" alt="Movie 8">
+            <p class="movie-title">ANT MAN</p>
+        </div>
+        <div class="movie" onclick="selectMovie('Movie 9')">
+            <img src="movie9.jpg" alt="Movie 9">
+            <p class="movie-title">RED COAT</p>
+        </div>
+        <div class="movie" onclick="selectMovie('Movie 10')">
+            <img src="movie10.jpg" alt="Movie 10">
+            <p class="movie-title">BEAUTY AND THE BEAST</p>
+        </div>
+    </div>
+    <div id="customer-care" class="info-section">
+        <h2>Customer Care</h2>
+        <p>For any assistance, please contact our customer care team:</p>
+        <p>Email: support@movies.com</p>
+        <p>Phone: 123-456-7890</p>
+    </div>
+    
+    <div id="faq" class="info-section">
+        <h2>Frequently Asked Questions</h2>
+        <h3>How can I book a ticket?</h3>
+        <p>You can book a ticket by selecting a movie and clicking the 'Book Ticket' button on the movie details page.</p>
+        <h3>What payment methods are accepted?</h3>
+        <p>We accept credit/debit cards, PayPal, and various online payment methods.</p>
+    </div>
+    <div id="enquiry" class="info-section">
+        <h2>Enquiry</h2>
+        <form id="enquiry-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>
