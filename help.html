@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Book It</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Book It Logo" class="logo">
+            <span class="title">BOOK IT</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search movie">
+            <button><img src="search-icon.png" alt="Search Icon"></button>
+        </div>
+        <div class="icons-right">
+            <a href="profile.html"><img src="account-icon.png" alt="Account Icon" class="account-logo"></a>
+            <a href="site_info.html"><img src="info-icon.png" alt="Info Icon" class="info-icon"></a>
+            <img src="menu-icon.png" alt="Menu Icon" class="menu-icon" onclick="toggleMenu()">
+        </div>
+        <div id="dropdown-menu" class="dropdown-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="help.html">Help</a>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Help</h1>
+        <h2>Frequently Asked Questions</h2>
+        <h3>How can I book a ticket?</h3>
+        <p>You can book a ticket by selecting a movie and clicking the 'Book Ticket' button on the movie details page.</p>
+        <h3>What payment methods are accepted?</h3>
+        <p>We accept credit/debit cards, PayPal, and various online payment methods.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
