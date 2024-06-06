@@ -64,20 +64,6 @@ body {
     align-content: start;
     cursor: pointer;
 }
-.nav-button {
-    background: #fff;
-    color: #e26613;
-    border: none;
-    padding: 10px 15px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-}
-
-.nav-button:hover {
-    background: #e26613;
-    color: #fff;
-}
 
 .movie-container {
     display: flex;

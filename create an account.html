@@ -24,8 +24,8 @@
 				Enter mail id
 			</label>
 			<input type="mail"
-				id="password"
-				name="password"
+				id="mail"
+				name="mail"
 				placeholder="mail id" required>
             <label for="password">
                 Create a password           
@@ -36,7 +36,7 @@
                     placeholder="password" required>
 
 			<div class="wrap">
-				<button type="submit" onclick="window.location.href='index.html'">Create An Account</button>
+				<button type="submit" onclick="validateForm()">Create An Account</button>
 			</div>
 		</form>
 		<p>
@@ -46,6 +46,23 @@
 			</a>
 		</p>
 	</div>
+	<script>
+
+        function validateForm() {
+            event.preventDefault();
+            var first = document.getElementsByName("first")[0].value;
+            var mail = document.getElementsByName("mail")[0].value;
+            var password = document.getElementsByName("password")[0].value;
+            
+
+            if (first === '' || mail === '' || password === '' ) {
+                alert("All fields are required");
+                return false;
+            }
+            
+            window.location.href = "login.html";
+        }
+    </script>
 </body>
 
 </html>
